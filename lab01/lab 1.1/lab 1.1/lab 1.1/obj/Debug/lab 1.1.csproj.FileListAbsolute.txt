@@ -1,0 +1,20 @@
+C:\Users\Daniil\Desktop\lab 1.1\lab 1.1\lab 1.1\bin\Debug\lab 1.1.exe.config
+C:\Users\Daniil\Desktop\lab 1.1\lab 1.1\lab 1.1\bin\Debug\lab 1.1.exe
+C:\Users\Daniil\Desktop\lab 1.1\lab 1.1\lab 1.1\bin\Debug\lab 1.1.pdb
+C:\Users\Daniil\Desktop\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab 1.1.csproj.AssemblyReference.cache
+C:\Users\Daniil\Desktop\lab 1.1\lab 1.1\lab 1.1\obj\Debug\RacingCarTuner.Forms.MainForm.resources
+C:\Users\Daniil\Desktop\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab_1._1.Properties.Resources.resources
+C:\Users\Daniil\Desktop\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab 1.1.csproj.GenerateResource.cache
+C:\Users\Daniil\Desktop\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab 1.1.csproj.CoreCompileInputs.cache
+C:\Users\Daniil\Desktop\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab 1.1.exe
+C:\Users\Daniil\Desktop\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab 1.1.pdb
+D:\ООАП\lab 1.1\lab 1.1\lab 1.1\bin\Debug\lab 1.1.exe.config
+D:\ООАП\lab 1.1\lab 1.1\lab 1.1\bin\Debug\lab 1.1.exe
+D:\ООАП\lab 1.1\lab 1.1\lab 1.1\bin\Debug\lab 1.1.pdb
+D:\ООАП\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab 1.1.csproj.AssemblyReference.cache
+D:\ООАП\lab 1.1\lab 1.1\lab 1.1\obj\Debug\RacingCarTuner.Forms.MainForm.resources
+D:\ООАП\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab_1._1.Properties.Resources.resources
+D:\ООАП\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab 1.1.csproj.GenerateResource.cache
+D:\ООАП\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab 1.1.csproj.CoreCompileInputs.cache
+D:\ООАП\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab 1.1.exe
+D:\ООАП\lab 1.1\lab 1.1\lab 1.1\obj\Debug\lab 1.1.pdb
