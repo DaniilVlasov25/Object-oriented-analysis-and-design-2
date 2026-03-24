@@ -1,0 +1,7 @@
+﻿  lab2.1.cpp
+C:\Users\Daniil\Desktop\ООАП 2\lab02\lab2.1\lab2.1\lab2.1\resource.h(15,9): warning C4005: IDI_SMALL: изменение макроопределения
+  (компиляция исходного файла "lab2.1.cpp")
+      C:\Users\Daniil\Desktop\ООАП 2\lab02\lab2.1\lab2.1\lab2.1\resource.h(6,9):
+      см. предыдущее определение "IDI_SMALL"
+  
+  lab2.1.vcxproj -> C:\Users\Daniil\Desktop\ООАП 2\lab02\lab2.1\lab2.1\x64\Debug\lab2.1.exe
