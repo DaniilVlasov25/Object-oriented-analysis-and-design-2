@@ -52,13 +52,12 @@ public:
 // Абстрактный класс (Abstraction)
 class Weapon {
 protected:
-    int basePower;
-
-public:
     std::string name;
     int durability;
+    int basePower;
     Damage* damageType;
 
+public:
     Weapon(Damage* damage, std::string n, int dur, int power)
         : damageType(damage), name(n), durability(dur), basePower(power) {
     }
