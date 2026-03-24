@@ -23,6 +23,7 @@
 - Sword, Bow, Staff (RefinedAbstraction) — конкретные типы оружия с уникальными характеристиками (sharpness, range, manaCost);
 - Player (Client) — класс игрока, управляющий инвентарём оружия.
 
+# Диаграмма классов
 <img width="1321" height="678" alt="image" src="https://github.com/user-attachments/assets/d6efe417-38e8-448e-b9cd-cbe1ba691813" />
 
 # Вывод
