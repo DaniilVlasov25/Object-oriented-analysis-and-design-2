@@ -8,11 +8,12 @@
 // WEAPON (Базовый класс)
 class Weapon {
 protected:
-    std::string name;
-    int durability;
     int basePower;
 
 public:
+    std::string name;
+    int durability;
+
     Weapon(std::string n, int dur, int power)
         : name(n), durability(dur), basePower(power) {
     }
@@ -83,8 +84,6 @@ public:
     std::string getDescription() override {
         return name + " (Fire)";
     }
-
-    void block() {}
 };
 
 // BOW PHYSICAL
