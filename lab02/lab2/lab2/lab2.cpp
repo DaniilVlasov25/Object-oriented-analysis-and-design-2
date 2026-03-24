@@ -83,8 +83,6 @@ public:
     std::string getDescription() override {
         return name + " (Fire)";
     }
-
-    void block() {}
 };
 
 // BOW PHYSICAL
