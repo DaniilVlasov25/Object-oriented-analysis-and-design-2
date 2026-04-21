@@ -26,6 +26,7 @@
 - GameCharacter (Конкретный издатель) — класс персонажа, наследующий Subject. Хранит состояние игры (здоровье, мана и т.д.) и вызывает метод notify() при каждом изменении данных.
 - HealthBarUI, ManaBarUI, GoldCounterUI, LevelUpNotification, DeathNotification (Конкретные подписчики) — классы, реализующие интерфейс Observer. Каждый из них реагирует на уведомления по-своему (например, HealthBarUI обновляет полоску здоровья, а DeathNotification показывает экран проигрыша).
 
+## Диаграмма классов
 <img width="1297" height="583" alt="image" src="https://github.com/user-attachments/assets/c4aef438-7094-47fe-886f-e501d56ea0e4" />
 
 ## Вывод
