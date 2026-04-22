@@ -78,18 +78,18 @@ class DeathNotification:
 
 
 class GameCharacter:
-   
+    
     def __init__(self, health_bar, mana_bar, gold_counter, level_notification, death_notification):
+        # Атрибуты персонажа
         self.health = 100
         self.maxHealth = 100
         self.mana = 50
-        self.maxMana = 50
+        self.maxMana = 50 
         self.gold = 0
         self.experience = 0
         self.level = 1
         self.isAlive = True
 
-        # ЖЕСТКИЕ ССЫЛКИ на конкретные объекты UI
         self.health_bar = health_bar
         self.mana_bar = mana_bar
         self.gold_counter = gold_counter
@@ -101,7 +101,6 @@ class GameCharacter:
         self._update_all_ui()
 
     def toggle_health_bar_connection(self):
-        
         self.is_health_bar_connected = not self.is_health_bar_connected
         state = "ПОДКЛЮЧЕНА" if self.is_health_bar_connected else "ОТКЛЮЧЕНА"
         print(f"[DEBUG] HealthBar {state}")
@@ -143,18 +142,32 @@ class GameCharacter:
             self.level += 1
             self.level_notification.check_level_up(self.level)
 
+    def spendMana(self, amount):
+        """Потратить ману"""
+        if not self.isAlive: return False
+        if self.mana >= amount:
+            self.mana -= amount
+            self.mana_bar.update_mana(self.mana, self.maxMana)
+            return True
+        return False
+
+    def castSpell(self, spellCost):
+        """Произнести заклинание"""
+        if not self.isAlive: return False
+        return self.spendMana(spellCost)
+
     def restore_mana(self, amount):
         if not self.isAlive: return
         self.mana = min(self.maxMana, self.mana + amount)
         self.mana_bar.update_mana(self.mana, self.maxMana)
 
-    def cast_spell(self, cost):
-        if not self.isAlive: return False
-        if self.mana >= cost:
-            self.mana -= cost
-            self.mana_bar.update_mana(self.mana, self.maxMana)
-            return True
-        return False
+    def get_health(self): return self.health
+    def get_max_health(self): return self.maxHealth
+    def get_mana(self): return self.mana
+    def get_max_mana(self): return self.maxMana
+    def get_gold(self): return self.gold
+    def get_xp(self): return self.experience
+    def get_level(self): return self.level
 
 
 class GameApp:
@@ -194,17 +207,15 @@ class GameApp:
         tk.Button(control_frame, text="💰 Найти золото (50)", command=lambda: self.character.gain_gold(50)).pack(fill='x', pady=2)
         tk.Button(control_frame, text="⚔️ Получить опыт (150)", command=lambda: self.character.gain_xp(150)).pack(fill='x', pady=2)
         tk.Button(control_frame, text="🔮 Восстановить ману (20)", command=lambda: self.character.restore_mana(20)).pack(fill='x', pady=2)
-        tk.Button(control_frame, text="✨ Заклинание (15 маны)", command=lambda: self.character.cast_spell(15)).pack(fill='x', pady=2)
+        tk.Button(control_frame, text="✨ Произнести заклинание (15 маны)", command=lambda: self.character.castSpell(15)).pack(fill='x', pady=2)
 
-        # Кнопка для демонстрации "костыльной" отписки
-        self.toggle_btn = tk.Button(control_frame, text="🔌 Отписать HealthBar ", 
+        self.toggle_btn = tk.Button(control_frame, text="🔌 Отписать HealthBar", 
                                     command=self._toggle_health_connection)
         self.toggle_btn.pack(fill='x', pady=10)
 
     def _toggle_health_connection(self):
         self.character.toggle_health_bar_connection()
         current_state = self.character.is_health_bar_connected
-        
         if current_state:
             self.toggle_btn.config(text="🔌 Отписать HealthBar")
         else:
