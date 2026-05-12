@@ -262,6 +262,12 @@ public class MainWithServiceStub extends JFrame {
                             payBtn.setEnabled(true);
                         });
                     }
+                    else {
+                        SwingUtilities.invokeLater(() -> {
+                            JOptionPane.showMessageDialog(this, "Оплата отклонена платежным шлюзом!", "Ошибка", JOptionPane.ERROR_MESSAGE);
+                            payBtn.setEnabled(true);
+                        });
+                    }
                 } catch (SQLException ex) { ex.printStackTrace(); }
             }).start();
         });
