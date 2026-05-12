@@ -28,6 +28,6 @@
 
 ## Диаграмма классов
 
-<img width="1124" height="756" alt="image" src="https://github.com/user-attachments/assets/ea224e93-a197-40c8-9046-4de9d657d1e4" />
+<img width="1214" height="771" alt="image" src="https://github.com/user-attachments/assets/d81dc321-c406-4405-9065-b50eed96a7fe" />
 
 ## Вывод
