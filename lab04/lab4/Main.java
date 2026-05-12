@@ -146,7 +146,7 @@ public class Main extends JFrame {
 
     private final String URL = "jdbc:mysql://localhost:3306/shop_db";
     private final String USER = "root";
-    private final String PASS = "$53%Gfr64anti3okc7"; 
+    private final String PASS = getPassword();
 
     public Main() {
         setTitle("Магазин");
@@ -222,6 +222,17 @@ public class Main extends JFrame {
         });
 
         setLocationRelativeTo(null);
+    }
+
+    private String getPassword() {
+        java.util.Properties prop = new java.util.Properties();
+            try (java.io.InputStream input = new java.io.FileInputStream("config.properties")) {
+            prop.load(input);
+            return prop.getProperty("db.password");
+        } catch (java.io.IOException ex) {
+            System.err.println("Ошибка: Файл config.properties не найден!");
+            return ""; 
+        }
     }
 
     private void loadDataFromDB() {
