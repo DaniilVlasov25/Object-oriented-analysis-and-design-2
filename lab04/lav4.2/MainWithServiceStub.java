@@ -172,8 +172,8 @@ public class MainWithServiceStub extends JFrame {
 
     private final String URL = "jdbc:mysql://localhost:3306/shop_db";
     private final String USER = "root";
-    private final String PASS = "$53%Gfr64anti3okc7"; 
-
+    private final String PASS = getPassword();
+    
     public MainWithServiceStub() {
         setTitle("Магазин");
         setSize(1000, 550);
@@ -267,6 +267,17 @@ public class MainWithServiceStub extends JFrame {
         });
 
         setLocationRelativeTo(null);
+    }
+
+    private String getPassword() {
+        java.util.Properties prop = new java.util.Properties();
+            try (java.io.InputStream input = new java.io.FileInputStream("config.properties")) {
+            prop.load(input);
+            return prop.getProperty("db.password");
+        } catch (java.io.IOException ex) {
+            System.err.println("Ошибка: Файл config.properties не найден!");
+            return ""; 
+        }
     }
 
     private void loadDataFromDB() {
